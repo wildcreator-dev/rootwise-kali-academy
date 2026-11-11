@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Navigate a learning path and complete a lesson",
+    "sanity": true,
+    "viewport": "desktop",
+    "covers": [
+      "course navigation",
+      "lesson content",
+      "lesson completion state",
+      "course progress"
+    ],
+    "description": "Verifies a learner can open a course, read a lesson, mark it complete and see progress update.",
+    "steps": [
+      "Open Learning paths",
+      "Open Kali Linux foundations",
+      "Mark the first lesson complete"
+    ],
+    "expected": "The lesson is marked complete and the course progress changes to 1 of 6."
+  },
+  {
+    "name": "Search and filter the command library",
+    "viewport": "desktop",
+    "covers": ["command search", "category filtering", "command reference"],
+    "description": "Verifies command search and category filters return matching learning references.",
+    "steps": [
+      "Open Command library",
+      "Enter ip in the search field",
+      "Select Network category"
+    ],
+    "expected": "Matching network commands such as ip a and ip route are displayed."
+  },
+  {
+    "name": "Use the safe terminal simulator",
+    "viewport": "desktop",
+    "covers": [
+      "simulated terminal input",
+      "simulated command output",
+      "safe command allowlist"
+    ],
+    "description": "Verifies supported demo commands show simulated output and unsupported commands are safely rejected.",
+    "steps": [
+      "Open Practice terminal",
+      "Enter pwd and run the demo",
+      "Enter an unsupported command and run the demo"
+    ],
+    "expected": "pwd displays the example lab directory and the unsupported command displays a safe help message."
+  },
+  {
+    "name": "Complete the knowledge quiz and review feedback",
+    "viewport": "mobile",
+    "covers": [
+      "quiz answer selection",
+      "quiz submission validation",
+      "score and explanations",
+      "quiz retry"
+    ],
+    "description": "Verifies the learner can answer all questions, submit, review feedback and restart the quiz on mobile.",
+    "steps": [
+      "Open Knowledge quiz",
+      "Choose an answer for each of the five questions",
+      "Submit the quiz",
+      "Choose Try again"
+    ],
+    "expected": "A score and per-question explanations appear; Try again resets all answers."
+  }
+]
